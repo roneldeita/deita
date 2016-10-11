@@ -12,7 +12,7 @@
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
-
+    <link href="/css/style.css" rel="stylesheet">
     <!-- Scripts -->
     <script>
         window.Laravel = <?php echo json_encode([
@@ -36,14 +36,22 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                        <!-- {{ config('app.name', 'Laravel') }} -->
+                        <img class="app-logo" src="{{url('/images/logo.png')}}" alt="logo">
                     </a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
+                    <!-- <ul class="nav navbar-nav">
                         &nbsp;
+                    </ul> -->
+
+                    <!-- Center Side Of Navbar -->
+                    <ul class="nav navbar-nav navbar-center">
+                        <li><a href="">About</a></li>
+                        <li><a href="">Experience</a></li>
+                        <li><a href="">Contact</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
