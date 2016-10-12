@@ -19,7 +19,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/about', function(){
-
-
-});
+Route::resource('contact', 'ContactController');

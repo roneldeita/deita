@@ -1,3 +1,8 @@
+.app-logo{;
+        opacity: 0.85;
+        filter: alpha(opacity=85); /* For IE8 and earlier */
+    }
+
 .navbar-fixed-top {
     min-height: 80px;
 }

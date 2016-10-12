@@ -13,7 +13,7 @@
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
-    <!-- Import Styles -->
+    <!-- Imported Styles -->
     @yield('styles')
     <!-- Scripts -->
     <script>
@@ -51,9 +51,9 @@
 
                     <!-- Center Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-center">
-                        <li><a href="">About</a></li>
+                        <li><a href="{{ url('/') }}">About</a></li>
                         <li><a href="">Experience</a></li>
-                        <li><a href="">Contact</a></li>
+                        <li><a href="{{ url('/contact') }}">Contact</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -93,7 +93,7 @@
 
     <!-- Scripts -->
     <script src="/js/app.js"></script>
-    <!-- Import Scripts -->
+    <!-- Imported Scripts -->
      @yield('scripts')
 </body>
 </html>

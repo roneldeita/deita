@@ -2,6 +2,9 @@
     padding-top: 50px;
     padding-bottom: 100px;
 }
+.panel-cmd{
+    box-shadow: 5px 10px 10px #808080;
+}
 .panel-cmd .panel-heading{
     padding: 6px;
     color: black;
@@ -18,10 +21,11 @@
 
 .typed-cursor{
     font-size: 24px;
+    font-weight: bold;
     opacity: 1;
-    -webkit-animation: blink 0.7s infinite;
-    -moz-animation: blink 0.7s infinite;
-    animation: blink 0.7s infinite;
+    -webkit-animation: blink 0.8s infinite;
+    -moz-animation: blink 0.8s infinite;
+    animation: blink 0.8s infinite;
 }
 @keyframes blink{
     0% { opacity:1; }

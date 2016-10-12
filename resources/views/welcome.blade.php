@@ -2,9 +2,8 @@
 
 @section('styles')
 
-<script src="https://use.fontawesome.com/e3f893d60b.js"></script>
-
 <link href="{!! asset('typed.js-master/css/css.css') !!}" rel="stylesheet">
+<script src="https://use.fontawesome.com/e3f893d60b.js"></script>
 
 @endsection
 
@@ -17,7 +16,7 @@
                 <div class="panel panel-default panel-cmd">
                     <div class="panel-heading">
 
-                        <span class="fa fa-gears" aria-hidden="true"></span> deita:/>_
+                        <span class="fa fa-gears" aria-hidden="true"></span> deita >_
                         <span class="fa fa-close pull-right" aria-hidden="true"></span>
 
                     </div>
@@ -40,18 +39,21 @@
 
     <div class="row">
         <div class="col-md-12">
-            <div class="jumbotron text-center">
-            <h1>About me</h1>
-             <p>I am a self-taught person. I never imagine to myself that I will become a programmer because I knew it was kind of a job that doesn't work in just a natural way of thinking 
-                and you'll have to keep a lot of things in your head all at the same time.
-                After years of doing such things, it changes my way of thinking. I figure out that my brain was actually big and I am just using ten percent of it. </p>
+            <div class="jumbotron text-center" style="background:transparent !important">
+                <p style="line-height:10px">A little bit</p>
+                <h1 style="line-height:20px">about me</h1>
+                <div style="padding-top:50px">
+                <p>I am a self-taught person. I never imagine to myself that I will become a programmer because I knew it was kind of a job that doesn't work in just a natural way of thinking 
+                 and you'll have to keep a lot of things in your head all at the same time.
+                    After years of doing such things, it changes my way of thinking. I figure out that my brain was actually big and I am just using ten percent of it. </p>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="row">
         <div class="col-md-12">
-            <div class="jumbotron text-center">
+            <div class="jumbotron text-center" style="background:transparent !important">
             <h1>Skills</h1>
                 <div class="row" style="padding-top:50px">
                     <div class="col-sm-6 col-md-3">
