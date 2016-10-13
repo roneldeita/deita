@@ -52,7 +52,7 @@
                     <!-- Center Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-center">
                         <li><a href="{{ url('/') }}">About</a></li>
-                        <li><a href="">Experience</a></li>
+                        <li><a href="{{ url('/experience') }}">Experience</a></li>
                         <li><a href="{{ url('/contact') }}">Contact</a></li>
                     </ul>
 
