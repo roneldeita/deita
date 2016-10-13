@@ -41,10 +41,12 @@ class ContactController extends Controller
      */
     public function store(ContactRequest $request)
     {
-        $input =  $request->all();
 
-        Contact::create($input);
-
+        $store = Contact::create($request->all());
+       
+        return response()->json([
+            'success' => True
+        ]);
     }
 
     /**

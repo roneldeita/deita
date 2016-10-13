@@ -17,11 +17,15 @@ $(document).ready(function() {
 			beforeSend: function(){
 				//empty the error container
         		$( ".error-msg" ).empty();
-        		//disable and change the value of button
 				disableBtn('btn-contactus','Submitting');
 			},
 			success: function(data){
-				console.log(data);
+				if(data.success === true){
+					resetForm('contact-form');
+					var msg="Thank you for contacting me";
+					$('<p class="text-success">'+ msg +'</p>').appendTo('.error-msg');
+				}
+				//console.log(data);
 			},
 			error: function(data){
 			    //get the response
@@ -54,3 +58,7 @@ function resetBtn(btnClass,btnText){
 	}
 	$('.'+btnClass).removeClass('disabled');
 }
+
+function resetForm(formid) {
+	$(':input','#'+formid).not(':button, :submit, :reset, :hidden').val('').removeAttr('checked').removeAttr('selected');
+ }
