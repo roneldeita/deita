@@ -93,7 +93,11 @@
 
     <!-- Scripts -->
     <script src="/js/app.js"></script>
+
+    <script src="https://use.fontawesome.com/e3f893d60b.js"></script>
+
     <!-- Imported Scripts -->
      @yield('scripts')
+     
 </body>
 </html>

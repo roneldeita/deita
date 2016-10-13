@@ -3,8 +3,7 @@
 @section('styles')
 
     <link href="{!! asset('typed.js-master/css/css.css') !!}" rel="stylesheet">
-    <script src="https://use.fontawesome.com/e3f893d60b.js"></script>
-
+    
 @endsection
 
 @section('content')
@@ -83,11 +82,12 @@
 
 @section('scripts')
 
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
     <script type="text/javascript" src="{!! asset('typed.js-master/dist/typed.min.js') !!}"></script>
     
-    <script type="text/javascript" src="{!! asset('jquery-circle-progress-1.2.0/dist/circle-progress.min.js') !!}"></script>
+    <script type="text/javascript" src="{!! asset('circle-progress/dist/circle-progress.min.js') !!}"></script>
 
     <script>
         $(function(){

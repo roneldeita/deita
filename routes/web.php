@@ -19,10 +19,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::resource('contact', 'ContactController');
-
 Route::get('/experience', function(){
 
 	return view('experience.index');
 	
 });
+
+Route::resource('contact', 'ContactController');
+
+
