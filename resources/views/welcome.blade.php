@@ -2,8 +2,8 @@
 
 @section('styles')
 
-<link href="{!! asset('typed.js-master/css/css.css') !!}" rel="stylesheet">
-<script src="https://use.fontawesome.com/e3f893d60b.js"></script>
+    <link href="{!! asset('typed.js-master/css/css.css') !!}" rel="stylesheet">
+    <script src="https://use.fontawesome.com/e3f893d60b.js"></script>
 
 @endsection
 
@@ -55,18 +55,22 @@
         <div class="col-md-12">
             <div class="jumbotron text-center" style="background:transparent !important">
             <h1>Skills</h1>
-                <div class="row" style="padding-top:50px">
+                <div class="row skills" style="padding-top:50px">
                     <div class="col-sm-6 col-md-3">
-                        <div class="html"></div><span>HTML</span>
+                        <div class="progress-skill" data-value="0.90" data-grad="404040"></div>
+                        <span class="text-primary"><strong>HTML</strong></span>
                     </div>
                     <div class="col-sm-6 col-md-3">
-                        <div class="php"></div><span>PHP</span>
+                        <div class="progress-skill" data-value="0.75" data-grad="ff1a1a"></div>
+                        <span class="text-primary"><strong>PHP</strong></span>
                     </div>
                     <div class="col-sm-6 col-md-3">
-                        <div class="css"></div><span>CSS</span>
+                        <div class="progress-skill" data-value="0.60" data-grad="006699"></div>
+                        <span class="text-primary"><strong>CSS</strong></span>
                     </div>
                      <div class="col-sm-6 col-md-3">
-                        <div class="js"></div><span>JavaScript</span>
+                        <div class="progress-skill" data-value="0.70" data-grad="408000"></div>
+                        <span class="text-primary"><strong>JavaScript</strong></span>
                     </div>
                 </div>
             </div>
@@ -79,62 +83,32 @@
 
 @section('scripts')
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-<script type="text/javascript" src="{!! asset('typed.js-master/dist/typed.min.js') !!}"></script>
+    <script type="text/javascript" src="{!! asset('typed.js-master/dist/typed.min.js') !!}"></script>
+    
+    <script type="text/javascript" src="{!! asset('jquery-circle-progress-1.2.0/dist/circle-progress.min.js') !!}"></script>
 
-<script type="text/javascript" src="{!! asset('jquery-circle-progress-1.2.0/dist/circle-progress.min.js') !!}"></script>
+    <script>
+        $(function(){
+            $("#typed").typed({
+                stringsElement: $('#typed-strings'),
+                contentType: 'html',
+                typeSpeed: 80
+            });
 
-<script>
-    $(function(){
-        $("#typed").typed({
-             stringsElement: $('#typed-strings'),
-            contentType: 'html',
-            typeSpeed: 80
+            $('.progress-skill').circleProgress({
+                value: $(this).data('value'),
+                size: 120,
+                thickness: 15,
+                lineCap: "square",
+                fill: {
+                  gradient: ["#ffff33", "#ffa31a", "#ff531a"]
+                }
+            });
+
         });
 
-        $('.html').circleProgress({
-            value: 0.90,
-            size: 120,
-            thickness: 15,
-            lineCap: "square",
-            fill: {
-              gradient: ["#cccccc", "#404040"]
-            }
-        });
-
-        $('.php').circleProgress({
-            value: 0.75,
-            size: 120,
-            thickness: 15,
-            lineCap: "square",
-            fill: {
-              gradient: ["#ffb3b3", "#ff1a1a"]
-            }
-        });
-
-        $('.css').circleProgress({
-            value: 0.60,
-            size: 120,
-            thickness: 15,
-            lineCap: "square",
-            fill: {
-              gradient: ["#99ddff", "#006699"]
-            }
-        });
-
-        $('.js').circleProgress({
-            value: 0.70,
-            size: 120,
-            thickness: 15,
-            lineCap: "square",
-            fill: {
-              gradient: ["#ccff99", "#408000"]
-            }
-        });
-
-    });
-
-</script>
+    </script>
     
 @endsection

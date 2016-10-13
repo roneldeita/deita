@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Requests\ContactRequest;
 use Illuminate\Support\Facades\Session;
+use App\Contact;
 
 class ContactController extends Controller
 {
@@ -40,7 +41,10 @@ class ContactController extends Controller
      */
     public function store(ContactRequest $request)
     {
-        return $request->all();
+        $input =  $request->all();
+
+        Contact::create($input);
+
     }
 
     /**

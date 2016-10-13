@@ -56,60 +56,6 @@
 
 @section('scripts')
 
-	<script type="text/javascript">
-		$(document).ready(function() {
-
-			$('#contact-form').on('submit',function(e){
-			    $.ajaxSetup({
-			        header:$('meta[name="_token"]').attr('content')
-			    })
-			    e.preventDefault(e);
-
-			        $.ajax({
-
-			       		type:"POST",
-			        	url:$(this).attr('action'),
-			        	data:$(this).serialize(),
-			        	dataType: 'json',
-			        	beforeSend: function(){
-							disableBtn('btn-contactus','Submitting');
-						},
-			        	success: function(data){
-			            	//console.log(data);
-			        	},
-			        	error: function(data){
-			        		//get the response
-			        		var errors = data.responseJSON;
-        					//empty the error container
-        					$( ".error-msg" ).empty();
-        					//loop the trough and display the error
-        					$.each( errors, function( key, value ) {
-        						$('<li class="text-danger">'+ value +'</li>').appendTo('.error-msg');
-							});
-			        	},
-			        	complete: function() {
-							resetBtn('btn-contactus','Submit');
-						}
-
-			    	})
-			 });
-
-		});
-
-		function disableBtn(btnClass,btnText){
-			if(btnText){
-				$('.'+btnClass).val(btnText);
-			}
-			$('.'+btnClass).addClass('disabled');
-			
-		}
-		function resetBtn(btnClass,btnText){
-			if(btnText){
-				$('.'+btnClass).val(btnText);
-			}
-			$('.'+btnClass).removeClass('disabled');
-		}
-
-	</script>
+	<script type="text/javascript" src="{!! asset('js/contact.js') !!}"></script>
 
 @endsection
