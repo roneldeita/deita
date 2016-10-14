@@ -42,9 +42,9 @@
                 <p style="line-height:10px">A little bit</p>
                 <h1 style="line-height:20px">about me</h1>
                 <div style="padding-top:50px">
-                <p>I am a self-taught person. I never imagine to myself that I will become a programmer because I knew it was kind of a job that doesn't work in just a natural way of thinking 
-                 and you'll have to keep a lot of things in your head all at the same time.
-                    After years of doing such things, it changes my way of thinking. I figure out that my brain was actually big and I am just using ten percent of it. </p>
+                <p>I am a self-taught person. I never imagine that I will become a programmer because it is a job that doesn't work by using your natural instinct.
+                    It requires you to keep a lot of things in your head at the same time. After being such for a lot of years, I unearth so many things.
+                    I figure out that my brain is actually huge and I'm just using part of it, just ten percent. </p>
                 </div>
             </div>
         </div>
